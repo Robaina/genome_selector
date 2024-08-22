@@ -30,9 +30,7 @@ def select_representative_genomes_clustering(ec_data, abundance_data, n_clusters
     selected_genomes = []
     for cluster in clusters.values():
         # Select the genome with the highest abundance in the cluster
-        representative = max(
-            cluster, key=lambda g: abundance_data.loc[g, "relative_abundance"]
-        )
+        representative = max(cluster, key=lambda g: abundance_data.loc[g, "abundance"])
         selected_genomes.append(representative)
 
     # Calculate EC number coverage
