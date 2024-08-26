@@ -1,0 +1,6 @@
+pandas
+scipy
+matplotlib
+matplotlib-venn
+poetry
+ipykernel
